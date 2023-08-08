@@ -1,7 +1,7 @@
 public class Stat
 {
     public string description;
-    public uint level;
+    public byte level;
     public uint currentXp;
     public uint xp;
 }

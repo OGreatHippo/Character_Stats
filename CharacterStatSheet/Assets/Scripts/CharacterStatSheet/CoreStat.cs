@@ -2,7 +2,7 @@ public class CoreStat : Stat
 {
     public uint skills;
 
-    public CoreStat(string _description, uint _level)
+    public CoreStat(string _description, byte _level)
     {
         description = _description;
         level = _level;
