@@ -8,6 +8,8 @@ public class SkillStat : Stat
         stat = _stat;
         level = _level;
         xp = 5;
+
+        _stat.skills++;
     }
 
     public void AddXP(uint _xp)

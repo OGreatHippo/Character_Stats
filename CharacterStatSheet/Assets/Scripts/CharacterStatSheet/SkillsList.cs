@@ -19,8 +19,11 @@ public class SkillsList
 
     public SkillsList(CoreStatsList coreStatsList)
     {
+        //Strength
         TwoHandedSwords = new SkillStat("Big Swords", coreStatsList.Strength, 5);
         TwoHandedMaces = new SkillStat("Big Maces", coreStatsList.Strength, 5);
         TwoHandedAxes = new SkillStat("Big Axes", coreStatsList.Strength, 5);
+
+
     }
 }

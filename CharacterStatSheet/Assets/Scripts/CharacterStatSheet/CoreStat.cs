@@ -1,5 +1,7 @@
 public class CoreStat : Stat
 {
+    public uint skills;
+
     public CoreStat(string _description, uint _level)
     {
         description = _description;
@@ -10,7 +12,7 @@ public class CoreStat : Stat
     {
         currentXp += _xp;
 
-        if(currentXp >= 3)
+        if(currentXp >= skills)
         {
             currentXp = 0;
             level++;
