@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class CharacterSheet : MonoBehaviour
 {
+    public bool isPlayer;
+    public string characterName;
     public byte level = 1;
-    private Dictionary<RaceChoice, Race> raceDictionary;
-    private RaceAttributes races;
     public RaceChoice selectedRace;
+    private RaceAttributes raceAttributes;
     public bool isMale;
 
     private CoreStatsList statsList;
@@ -29,13 +30,20 @@ public class CharacterSheet : MonoBehaviour
 
     private void AddComponents()
     {
+        if(isPlayer)
+        {
+            characterName = string.Empty;
+        }
+
         statsList = new CoreStatsList();
         skillsList = new SkillsList(statsList);
+        raceAttributes = new RaceAttributes();
 
-        raceDictionary.Add(RaceChoice.Human, races.Human);
-        raceDictionary.Add(RaceChoice.Elf, races.Elf);
-        raceDictionary.Add(RaceChoice.Dwarf, races.Dwarf);
-        raceDictionary.Add(RaceChoice.Orc, races.Orc);
+        if (raceAttributes.raceDictionary.TryGetValue(selectedRace, out Race attributes))
+        {
+            strength += attributes.strength;
+
+        }
     }
 
     private void SetCoreStatData()

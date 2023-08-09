@@ -28,6 +28,16 @@ public class RaceAttributes
     public Race Elf = new Race(0, 0, 10, 10, 10, 5, 0);
     public Race Dwarf = new Race(10, 10, 0, 5, 0, 0, 10);
     public Race Orc = new Race(10, 10, 5, 0, 5, 5, 0);
+
+    public Dictionary<RaceChoice, Race> raceDictionary = new Dictionary<RaceChoice, Race>();
+
+    public RaceAttributes()
+    {
+        raceDictionary.Add(RaceChoice.Human, Human);
+        raceDictionary.Add(RaceChoice.Elf, Elf);
+        raceDictionary.Add(RaceChoice.Dwarf, Dwarf);
+        raceDictionary.Add(RaceChoice.Orc, Orc);
+    }
 }
 
 public enum RaceChoice
