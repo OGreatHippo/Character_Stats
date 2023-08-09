@@ -2,23 +2,17 @@ using System.Collections.Generic;
 
 public class Race
 {
-    public byte strength;
-    public byte constitution;
-    public byte dexterity;
-    public byte intelligence;
-    public byte wisdom;
-    public byte charisma;
-    public byte luck;
+    public CoreStatsList stats;
 
     public Race(byte _strength, byte _constitution, byte _dexterity, byte _intelligence, byte _wisdom, byte _charisma, byte _luck)
     {
-        strength = _strength;
-        constitution = _constitution;
-        dexterity = _dexterity;
-        intelligence = _intelligence;
-        wisdom = _wisdom;
-        charisma = _charisma;
-        luck = _luck;
+        stats.Strength.level = _strength;
+        stats.Constitution.level = _constitution;
+        stats.Dexterity.level = _dexterity;
+        stats.Intelligence.level = _intelligence;
+        stats.Wisdom.level = _wisdom;
+        stats.Charisma.level = _charisma;
+        stats.Luck.level = _luck;
     }
 }
 

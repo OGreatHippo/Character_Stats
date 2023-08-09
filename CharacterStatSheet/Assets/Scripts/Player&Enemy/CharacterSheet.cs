@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterSheet : MonoBehaviour
@@ -37,13 +36,7 @@ public class CharacterSheet : MonoBehaviour
 
         statsList = new CoreStatsList();
         skillsList = new SkillsList(statsList);
-        raceAttributes = new RaceAttributes();
-
-        if (raceAttributes.raceDictionary.TryGetValue(selectedRace, out Race attributes))
-        {
-            strength += attributes.strength;
-
-        }
+        raceAttributes = new RaceAttributes(); 
     }
 
     private void SetCoreStatData()
@@ -55,5 +48,16 @@ public class CharacterSheet : MonoBehaviour
         statsList.Wisdom.level = wisdom;
         statsList.Charisma.level = charisma;
         statsList.Luck.level = luck;
+
+        if (raceAttributes.raceDictionary.TryGetValue(selectedRace, out Race attributes))
+        {
+            strength += attributes.stats.Strength.level;
+            constitution += attributes.stats.Constitution.level;
+            dexterity += attributes.stats.Dexterity.level;
+            intelligence += attributes.stats.Intelligence.level;
+            wisdom += attributes.stats.Wisdom.level;
+            charisma += attributes.stats.Charisma.level;
+            luck += attributes.stats.Luck.level;
+        }
     }
 }
