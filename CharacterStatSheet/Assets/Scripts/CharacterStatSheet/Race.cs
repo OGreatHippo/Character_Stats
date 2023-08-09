@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class Race
 {
-    public CoreStatsList stats;
+    public CoreStatsList stats = new CoreStatsList();
 
     public Race(byte _strength, byte _constitution, byte _dexterity, byte _intelligence, byte _wisdom, byte _charisma, byte _luck)
     {

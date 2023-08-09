@@ -471,9 +471,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227a0ac0db2be004ca7ca98fdaeec979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: 
   level: 1
   selectedRace: 0
-  isMale: 0
+  isMale: 1
+  isPlayer: 1
   strength: 5
   constitution: 5
   dexterity: 5
@@ -481,3 +483,6 @@ MonoBehaviour:
   wisdom: 5
   charisma: 5
   luck: 5
+  twohandedswords: 5
+  twohandedmaces: 5
+  twohandedaxes: 5
